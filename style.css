@@ -38,8 +38,12 @@ body,html {
 
 .alarm-set {
     background-color: #498AFB;
+    font-family: 'Kumbh Sans', sans-serif;
+    border-radius: 10px;
 }
 
 .alarm-clear {
     background-color: #FF3860;
+    font-family: 'Kumbh Sans', sans-serif;
+    border-radius: 10px;
 }
