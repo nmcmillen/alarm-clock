@@ -13,8 +13,9 @@
 
 <body>
     <section class="container">
-        <div id="clock"></div>
-        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+        <div id="date">Date</div>
+        <div id="clock">Clock</div>
+        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local" id="input-date">
         <div class="controls">
             <button onclick="setAlarm()" class="alarm-set">Set alarm</button>
             <button onclick="clearAlarm()" class="alarm-clear">Clear alarm</button>

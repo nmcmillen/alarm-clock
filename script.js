@@ -1,27 +1,39 @@
-console.log('hello')
-
-let display = document.getElementById('clock');
+let displayDate = document.getElementById('date')
+let displayClock = document.getElementById('clock');
 let audio = new Audio('https://onlineclock.net/audio/options/default.mp3')
 audio.loop = true;
 let alarmTime = null;
 let alarmTimeout = null;
+let timeFormat = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+});
+
+function updateDay() {
+    let date = new Date();
+
+    let day = formatTime(date.getDay());
+    displayDate.innerText=`${day}`;
+}
 
 function updateTime() {
     let date = new Date();
 
-    let hour = formatTime(date.getHours());
-    let minutes = formatTime(date.getMinutes());
-    let seconds = formatTime(date.getSeconds());
+    // let hour = formatTime(date.getHours());
+    // let minutes = formatTime(date.getMinutes());
+    // let seconds = formatTime(date.getSeconds());
+    // //`${hour}:${minutes}:${seconds}`
 
-    display.innerText=`${hour} : ${minutes} : ${seconds}`;
+    displayClock.innerText=(timeFormat.format(date));
 }
 
-function formatTime(time) {
-    if (time < 10) {
-        return '0' + time;
-    }
-    return time;
-}
+// function formatTime(time) {
+//     if (time < 10) {
+//         return '0' + time;
+//     }
+//     return time;
+// }
 
 function setAlarmTime(value) {
     alarmTime = value;
@@ -36,7 +48,7 @@ function setAlarm() {
         if (timeToAlarm > current) {
             let timeout = timeToAlarm.getTime() - current.getTime();
             alarmTimeout = setTimeout(() => audio.play(), timeout);
-            alert('Alarm set');
+            alert('Alarm set for ' + alarmTime);
         }
     }
 }
@@ -50,3 +62,4 @@ function clearAlarm() {
 }
 
 setInterval(updateTime, 1000);
+updateDay();
