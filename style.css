@@ -57,3 +57,9 @@ body,html {
     font-family: 'Kumbh Sans', sans-serif;
     text-transform: uppercase;
 }
+
+.radio-buttons {
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0px 0px 10px;
+}
