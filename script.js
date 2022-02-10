@@ -8,13 +8,20 @@ let timeFormat = new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
+
+    //hour12: false (use this to change from 12 hour clock to 24)
 });
+let dateFormat = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+})
 
 function updateDay() {
     let date = new Date();
 
-    let day = formatTime(date.getDay());
-    displayDate.innerText=`${day}`;
+    //let day = formatTime(date.getDay());
+    displayDate.innerText=(dateFormat.format(date));
 }
 
 function updateTime() {

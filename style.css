@@ -15,10 +15,15 @@ body,html {
     align-items: center;
 }
 
+#date {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 4vw;
+    color: white;
+}
+
 #clock {
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 15vw;
-    background-image: black;
+    font-size: 12vw;
     color: white;
 }
 
