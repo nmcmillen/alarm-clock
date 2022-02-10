@@ -15,10 +15,15 @@ body,html {
     align-items: center;
 }
 
+#date {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 4vw;
+    color: white;
+}
+
 #clock {
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 15vw;
-    background-image: black;
+    font-size: 12vw;
     color: white;
 }
 
@@ -39,11 +44,22 @@ body,html {
 .alarm-set {
     background-color: #498AFB;
     font-family: 'Kumbh Sans', sans-serif;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .alarm-clear {
     background-color: #FF3860;
     font-family: 'Kumbh Sans', sans-serif;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+#input-date {
+    font-family: 'Kumbh Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.radio-buttons {
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0px 0px 10px;
 }
