@@ -17,8 +17,8 @@
         <div id="clock">Clock</div>
 
             <div class="radio-buttons">
-                <input type="radio" name="hour" onclick="updateTime()" value="12-Hour" id="12hour" checked="checked">12-Hour
-                <input type="radio" name="hour" onclick="updateTime24()" value="24-Hour" id="24hour">24-Hour
+                <input type="radio" name="hour" onclick="updateClock(12)" value="12-Hour" id="12hour" checked="checked">12-Hour
+                <input type="radio" name="hour" onclick="updateClock(24)" value="24-Hour" id="24hour">24-Hour
             </div>
 
         <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local" id="input-date">
