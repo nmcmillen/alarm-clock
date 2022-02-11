@@ -20,9 +20,9 @@
                 <input type="radio" name="hour" onclick="updateClock(12)" value="12-Hour" id="12hour" checked="checked">12-Hour
                 <input type="radio" name="hour" onclick="updateClock(24)" value="24-Hour" id="24hour">24-Hour
             </div>
-
+        <!-- Sets onchange of date with "value" parameter that links to the setAlarmTime function -->
         <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local" id="input-date">
-        <div class="controls">
+        <div class="buttons">
             <button onclick="setAlarm()" class="alarm-set">Set alarm</button>
             <button onclick="clearAlarm()" class="alarm-clear">Clear alarm</button>
         </div>
